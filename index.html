@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="val.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.1"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine?</h1>
+        <img src="kuromi.gif" alt="Kuromi GIF" class="kuromi-gif">
+        <div class="buttons">
+            <button id="yes" class="btn yes-btn">Yes</button>
+            <button id="no" class="btn no-btn">No</button>
+        </div>
+    </div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="1st.jpg" alt="Us Together" class="popup-img">
+            <div class="nav-buttons">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+            <input type="text" id="secret-input" placeholder="Type something..." style="position: absolute; top: -100px;">
+
+        </div>
+    </div>
+    <audio id="love-song" src="ifly.mp3"></audio>
+    
+    <script src="val.js"></script>
+</body>
+</html>

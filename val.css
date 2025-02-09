@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6f2; /* Soft Pink Background */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    cursor: url('heart-cursor.png'), auto; /* Custom cursor */
+}
+
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    animation: backgroundMove 10s infinite alternate;
+}
+@keyframes backgroundMove {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+}
+
+
+/* Main Container */
+.container {
+    background: #ffe6f2;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+/* Title */
+h1 {
+    color: #ff4d94;
+    font-size: 24px;
+    margin-bottom: 15px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Kuromi GIF */
+.kuromi-gif {
+    width: 150px;
+    height: auto;
+    margin: 15px 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Yes Button */
+#yes {
+    background-color: #ff4d94;
+    color: white;
+    font-size: 16px;
+}
+
+#no {
+    flex-grow: 0; /* Prevent it from growing */
+    flex-shrink: 0; /* Prevent it from shrinking */
+    width: 60px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    font-size: 16px; /* Ensure it stays the same */
+    background-color: #e94d4d; /* Light gray to match */
+}
+
+/* Shared Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effects */
+#yes:hover {
+    background-color: #ff3385;
+}
+
+#no:hover {
+    background-color: #ff3333;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.nav-buttons button {
+    background: pink;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: hotpink;
+    color: white;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}
+
+.close:hover {
+    color: red;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Falling Hearts Animation */
+@keyframes fall {
+    0% { transform: translateY(-100px) scale(0.5); opacity: 1; }
+    100% { transform: translateY(100vh) scale(1); opacity: 0; }
+}
+
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 24px;
+    color: red;
+    animation: fall linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+
+#secret-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.love-message-box {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    background: rgba(255, 0, 128, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    animation: floatUp 3s linear forwards;
+}
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
