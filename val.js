@@ -37,7 +37,7 @@ document.querySelector('.close').addEventListener('click', function () {
 });
 
 let currentImageIndex = 0;
-const images = ["1st.jpg", "2nd.jpg", "her.jpg", "her1.jpg"];
+const images = ["1st.jpg", "2nd.jpg", "her.jpg", "her1.jpg", "her2.jpg", "her3.jpg", "her4.jpg", "her5.jpg"];
 
 const popupImg = document.querySelector(".popup-img");
 
